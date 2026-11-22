@@ -1,0 +1,50 @@
+{
+  "name": "dsh-voice",
+  "version": "0.1.0",
+  "description": "输入框里的语音按钮：录音转成文字写入草稿，可自动发送；不联网、不下载模型",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "voice-input",
+    "speech-to-text"
+  ],
+  "author": "Changing670",
+  "homepage": "https://github.com/Changing670/dsh-voice#readme",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Changing670/dsh-voice.git"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

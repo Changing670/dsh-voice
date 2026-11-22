@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Voice input with auto-send",
+    "description": "A talk button at the left of the composer: record speech into the draft, optionally sending it right away, while risky wording is inserted without sending.",
+    "detail": "docs/DETAIL.md"
+  }
+}
